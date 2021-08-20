@@ -16,7 +16,7 @@ jobs:
       - run: echo "hello world2" # run the `echo` command
       - run: npm install
       - run: npm run ng build
-      - run: npm run ng test --watch=false --code-coverage=true --browsers=ChromeHeadless
+      - run: npm run ng test --code-coverage=true
       - sonarcloud/scan
       - snyk/scan
 
