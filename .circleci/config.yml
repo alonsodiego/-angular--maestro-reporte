@@ -2,6 +2,7 @@ version: 2.1
 orbs:
   sonarcloud: sonarsource/sonarcloud@1.0.1
   snyk: snyk/snyk@1.0.2
+  angular: okode/angular@1.0.154
 jobs:
   build:
     docker:
@@ -13,7 +14,7 @@ jobs:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
       - run: echo "hello world2" # run the `echo` command
-      - run: ng build # run the `echo` command
+      - angular/build # run the `echo` command
       - sonarcloud/scan
       - snyk/scan
 
