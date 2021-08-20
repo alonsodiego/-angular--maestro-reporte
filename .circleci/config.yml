@@ -14,6 +14,7 @@ jobs:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
       - run: echo "hello world2" # run the `echo` command
+      - npm install
       - npm run ng build# run the `echo` command
       - sonarcloud/scan
       - snyk/scan
